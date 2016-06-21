@@ -1,7 +1,9 @@
-package com.example.rodri.swipedowntorefreshlistview;
+package com.example.rodri.swipedowntorefreshlistview.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.rodri.swipedowntorefreshlistview.R;
 
 public class MainActivity extends AppCompatActivity {
 
