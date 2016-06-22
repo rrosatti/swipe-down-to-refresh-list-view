@@ -84,12 +84,14 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         // append offSet to the URL
         String url = URL_TOP_250_MOVIES + offSet;
 
+        System.out.println("I've been here 1! ----------");
         JsonArrayRequest arrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 Log.d(TAG, response.toString());
-
+                System.out.println("I've been here 1.2! ----------");
                 if (response.length() > 0) {
+                    System.out.println("I've been here 2! ----------");
 
                     for (int i = 0; i < response.length(); i++) {
                         try {
@@ -124,6 +126,8 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                 Log.e(TAG, "Server error: " + error.getMessage());
 
                 Toast.makeText(getApplicationContext(), "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+
+                System.out.println("I've been here 3! ----------");
 
                 // stop swipe refresh
                 swipeRefreshLayout.setRefreshing(false);

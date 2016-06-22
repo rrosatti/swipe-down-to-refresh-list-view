@@ -24,7 +24,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        instance = null;
+        instance = this;
     }
 
     public static synchronized MyApplication getInstance() {
